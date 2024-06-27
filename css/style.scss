@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/** NAVIGATION **/
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 1.5%;
+    background-color: black;
+    z-index: 900;
+
+    .logo-container {
+        width: 125px;
+        height: 70px;
+        background-color: white;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 40px;
+        cursor: pointer;
+
+        li {
+            font-size: 25px;
+            color: white;
+
+            &:hover {
+                color: #F0AA52;
+            }
+        }
+    }
+}
+
+/** TARGET ALL SECTIONS **/
+.section {
+    padding: 2%;
+    width: 100vw;
+    height: 100vh;
+    // .fp-is-overflow > .fp-overflow{
+    //     overflow-y: hidden;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     margin-top: 5%;
+    // }
+}
+
+/** Slide 1 **/
+/** LANDING PAGE **/
+
+/** Slide 1 **/
+/** LANDING PAGE **/
+
+.section:nth-child(1) {
+    background-color: green;
+
+    /** Slide 1 **/
+    .slide:nth-child(1) {
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: space-between;
+        // align-items: center;
+        margin-top: 3%;
+        background-color: purple;
+        /* position: relative; */
+        /* top: 200px; */
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // gap: 50px;
+
+        .fp-overflow {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            // height: 60vh;
+        }
+
+        header {
+            h1 {
+                color: white;
+                font-size: 96px;
+                text-transform: uppercase;
+
+                #greeting {
+                    font-size: 128px;
+                }
+
+                #locationName {
+                    color: #F0AA52;
+                    font-size: 128px;
+                }
+            }
+
+            h2 {
+                padding-top: 4%;
+                font-size: 48px;
+                color: #F0AA52;
+            }
+        }
+
+        i {
+            color: #F0AA52;
+        }
+
+        .fa-solid {
+            font-size: 10rem;
+            margin-right: 3%;
+
+            @keyframes right {
+                0% {
+                    transform: translateX(0);
+                }
+
+                50% {
+                    transform: translateX(150px);
+                }
+
+                100% {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+}
+
+/** Slide 2 **/
+/** SEARCH PAGE & FILTER FORM **/
+.slide:nth-child(2) {
+    // background-color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2.3%;
+
+    h2 {
+        font-size: 64px;
+        color: white;
+        text-align: center;
+    }
+
+    form {
+        // margin-top: 10px;
+        // // margin-left: 30%;
+        // padding: 20px 20px 0;
+        // width: 580px;
+        // // height: 690px;
+        // background-color: white;
+        // color: black;
+        // border-radius: 8px;
+        margin-top: 10px;
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        background-color: white;
+        color: black;
+        border-radius: 8px;
+
+        .filter {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            label {
+                font-size: 16px;
+            }
+
+            select,
+            input {
+                width: 248px;
+                margin: 10px 0;
+                padding: 10px;
+                border-radius: 8px;
+                border: 1px solid #095CFB;
+            }
+        }
+
+        .filter-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+
+            .filter {
+
+                select,
+                input {
+                    width: 110px;
+                }
+            }
+        }
+
+        button {
+            margin: 10px 0 10px 0;
+            width: 240px;
+            padding: 10px;
+            background-color: #F0AA52;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 32px;
+            // font-weight: 400;
+            &:hover {
+                background-color: #cb8f44;
+            }
+        }
+    }
+}
+
+/** ACCOMMODATION PAGE **/
+.section:nth-child(2) {
+    background-color: red;
+    padding: 0;
+
+    /** Second Filter **/
+    .filter-container {
+        // margin-top: 10px;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        width: 100vw;
+        gap: 20px;
+        background-color: white;
+
+        // color: black;
+        // border-radius: 8px;
+        .filter {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            label {
+                font-size: 16px;
+            }
+
+            select,
+            input {
+                width: 248px;
+                margin: 10px 0;
+                padding: 10px;
+                border-radius: 8px;
+                border: 1px solid #095CFB;
+            }
+        }
+
+        button {
+            // margin: 10px 0 10px 0;
+            margin-top: 15px;
+            width: 248px;
+            padding: 10px;
+            background-color: #F0AA52;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+
+    .swiper {
+        max-width: 80vw;
+        // max-height: 80vh;
+
+        .swiper-slide {
+            margin-top: 4%;
+            height: 80vh;
+            width: 80vw !important;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+
+            .property {
+                border: 1px solid black;
+                border-radius: 8px;
+                overflow-y: auto;
+                background-color: white;
+                border: 1px solid rgba(255, 255, 255, 0.18);
+                box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.25);
+                -webkit-box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.25);
+                -moz-box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.25);
+
+                img {
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+
+                .property-details {
+                    padding: 10px;
+                    width: 100%;
+                    height: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: start;
+
+                    .property-amenities {
+                        display: flex;
+                        gap: 10px;
+                    }
+
+                    .more-info {
+                        width: 100%;
+                        color: white;
+                        font-size: 1.5rem;
+                        padding: 10px;
+                        background-color: #095CFB;
+                        border: white;
+                        border-radius: 8px;
+
+                        &:hover {
+                            background-color: #024bd2;
+                        }
+                    }
+                }
+            }
+        }
+
+        #previousPageButton, #nextPageButton {
+            width: 195px;
+            height: 35px;
+            color: white;
+            font-size: 25px;
+            background-color: #F0AA52;
+            border: none;
+            border-radius: 4px;
+            &:hover {
+                background-color: #cb8f44;
+            }
+        }
+        #nextPageButton {
+            position: absolute;
+            right: 0;
+        }
+    }
+}
+
+// /** MODAL PAGE **/
+.section:nth-child(3) {
+    background-color: pink;
+}
