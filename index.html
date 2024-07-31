@@ -24,9 +24,10 @@
     <nav id="fixedNav">
         <div class="logo-container"></div>
         <div class="nav-links">
-            <li id="goToHome">HOME</li>
-            <li id="goToSlide2">SEARCH</li>
-            <li id="goToAccommodations">ACCOMMODATIONS</li>
+            <button id="goToHome">HOME</button>
+            <button id="goToSearch">SEARCH</button>
+            <button id="goToAccommodations">ACCOMMODATIONS</button>
+
         </div>
     </nav>
     <!-- Nav End -->
@@ -36,17 +37,14 @@
         <!-- LANDING PAGE & SEARCH FILTER -->
         <div class="section">
             <!-- Slide 1 -->
-
             <div class="slide" id="landingPage">
                 <header>
                     <h1><span id="greeting">WELCOME</span> <br> TO <span id="locationName">TAUPŌ</span> <br>
                         ACCOMMODATIONS</h1>
-                        
+
                     <h2>Find your ideal Accommodation</h2>
                 </header>
 
-                <i class="fa-solid fa-angles-right" id="goToSlide2"></i>
-                <!-- <button class="arrow-btn" id="goToSlide2"><i class="fa-solid fa-angles-right" id="goToSlide2"></i></button> -->
             </div>
             <!-- End of Slide 1 -->
 
@@ -57,40 +55,29 @@
                     <!-- ACCOMMODATION TYPE FILTER -->
                     <div class="filter">
                         <label for="type">Type</label>
-                        <select name="type" id="type">
-                            <option value="Any">Any</option>
-                            <option value="Hotel">Hotel</option>
-                            <option value="Hostel">Hostel</option>
-                            <option value="House">House</option>
-                            <option value="Motel">Motel</option>
-                        </select>
+                        <select name="type" id="type"></select>
                     </div>
                     <!-- GUEST FILTER -->
-                    <div class="filter-wrapper">
-                        <div class="filter">
-                            <label for="minGuest">Min <i class="fa-solid fa-users"></i></label>
-                            <select name="minGuest" id="minGuest">
-                                <option value="#">Any</option>
-                                <option name="1+" id="1+">1+</option>
-                                <option name="2+" id="2+">2+</option>
-                                <option name="3+" id="3+">3+</option>
-                                <option name="4+" id="4+">4+</option>
-                                <option name="5+" id="5+">5+</option>
-                                <option name="6+" id="6+">6+</option>
-                            </select>
-                        </div>
-                        <div class="filter">
-                            <label for="maxGuest">Max <i class="fa-solid fa-users"></i></label>
-                            <select name="maxGuest" id="maxGuest">
-                                <option value="#">Any</option>
-                                <option name="1+" id="1+">1+</option>
-                                <option name="2+" id="2+">2+</option>
-                                <option name="3+" id="3+">3+</option>
-                                <option name="4+" id="4+">4+</option>
-                                <option name="5+" id="5+">5+</option>
-                                <option name="6+" id="6+">6+</option>
-                            </select>
-                        </div>
+                    <div class="filter">
+                        <label for="guests">Guests <i class="fa-solid fa-users"></i></label>
+                        <select name="guests" id="guests" required>
+                            <option value="#">Please Select</option>
+                            <option name="1" id="1">1</option>
+                            <option name="2" id="2">2</option>
+                            <option name="3" id="3">3</option>
+                            <option name="4" id="4">4</option>
+                            <option name="5" id="5">5</option>
+                            <option name="6" id="6">6</option>
+                            <option name="7" id="7">7</option>
+                            <option name="8" id="8">8</option>
+                            <option name="9" id="9">9</option>
+                            <option name="10" id="10">10</option>
+                            <option name="11" id="11">11</option>
+                            <option name="12" id="12">12</option>
+                            <option name="13" id="13">13</option>
+                            <option name="14" id="14">14</option>
+                            <option name="15" id="15">15</option>
+                        </select>
                     </div>
 
                     <!-- DATE FILTER -->
@@ -111,20 +98,10 @@
                             <select name="minPrice" id="minPrice">
                                 <option value="#">Any</option>
                                 <option value="$50">$50</option>
-                                <option value="$60">$60</option>
-                                <option value="$70">$70</option>
-                                <option value="$80">$80</option>
-                                <option value="$90">$90</option>
                                 <option value="$100">$100</option>
-                                <option value="$120">$120</option>
-                                <option value="$140">$140</option>
-                                <option value="$160">$160</option>
-                                <option value="$180">$180</option>
+                                <option value="$150">$150</option>
                                 <option value="$200">$200</option>
-                                <option value="$220">$220</option>
-                                <option value="$240">$240</option>
-                                <option value="$260">$260</option>
-                                <option value="$280">$280</option>
+                                <option value="$250">$250</option>
                                 <option value="$300">$300</option>
                             </select>
                         </div>
@@ -133,21 +110,12 @@
                             <select name="maxPrice" id="maxPrice">
                                 <option value="#">Any</option>
                                 <option value="$50">$50</option>
-                                <option value="$60">$60</option>
-                                <option value="$70">$70</option>
-                                <option value="$80">$80</option>
-                                <option value="$90">$90</option>
                                 <option value="$100">$100</option>
-                                <option value="$120">$120</option>
-                                <option value="$140">$140</option>
-                                <option value="$160">$160</option>
-                                <option value="$180">$180</option>
+                                <option value="$150">$150</option>
                                 <option value="$200">$200</option>
-                                <option value="$220">$220</option>
-                                <option value="$240">$240</option>
-                                <option value="$260">$260</option>
-                                <option value="$280">$280</option>
+                                <option value="$250">$250</option>
                                 <option value="$300">$300</option>
+                                <option value="$400">$400</option>
                             </select>
                         </div>
                     </div>
@@ -182,67 +150,40 @@
 
                     <!-- SUBMIT BUTTON -->
                     <button id="searchButton">Search</button>
+
+                    <div id="error-message"></div>
                 </form>
             </div>
             <!-- End of Slide 2 -->
 
-        </div>
-        <!-- ACCOMMODATION RESULTS -->
-        <div class="section" id="availiable-properties">
-       
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="property">
-                            <img src="https://placehold.co/600x400" alt="">
-                            <div class="property-details">
-                                <h3>Accommodation Name</h3>
-                                <p>Type</p>
-                                <h4>price</h4>
-                                <div class="property-amenities">
-                                    <p>bedrooms <i class="fa-solid fa-bed"></i></p>
-                                    <p>bathrooms <i class="fa-solid fa-bath"></i></p>
-                                </div>
-                                <button class="more-info">More Info</button>
-                            </div>
-                        </div>
-
-                        <div class="property">
-                            <img src="https://placehold.co/600x400" alt="">
-                            <div class="property-details">
-                                <h3>Accommodation Name</h3>
-                                <p>Type</p>
-                                <h4>price</h4>
-                                <div class="property-amenities">
-                                    <p>bedrooms <i class="fa-solid fa-bed"></i></p>
-                                    <p>bathrooms <i class="fa-solid fa-bath"></i></p>
-                                </div>
-                                <button class="more-info">More Info</button>
-                            </div>
-                        </div>
-
-                        <div class="property">
-                            <img src="https://placehold.co/600x400" alt="">
-                            <div class="property-details">
-                                <h3>Accommodation Name</h3>
-                                <p>Type</p>
-                                <h4>price</h4>
-                                <div class="property-amenities">
-                                    <p>bedrooms <i class="fa-solid fa-bed"></i></p>
-                                    <p>bathrooms <i class="fa-solid fa-bath"></i></p>
-                                </div>
-                                <button class="more-info">More Info</button>
-                            </div>
-                        </div>
+            <!-- Start of slide 3 -->
+            <!-- ACCOMMODATION RESULTS -->
+            <div class="slide" id="slide3">
+                <!-- SWIPER -->
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <!-- POPULATED CARDS - FROM JS -->
                     </div>
                 </div>
-                <button id="previousPageButton">Previous</button>
-                <button id="nextPageButton">Next</button>
             </div>
+            <!-- End of slide 3 -->
+
+            <!-- Start of Slide 4 -->
+            <!-- SELECTED CARD MODAL -->
+            <div class="slide" id="selectedCardModal">
+                <!-- Populated via JS -->
+            </div>
+            <!-- End of Slide 4 -->
+
+            <!-- Start of Slide 5 -->
+            <!-- SELECTED TOTAL MODAL -->
+            <div class="slide" id="total">
+                <!-- Populated via JS -->
+            </div>
+            <!-- End of Slide 5 -->
+
+
         </div>
-
-        <div class="section"></div>
-
 
     </div>
 
