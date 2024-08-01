@@ -493,43 +493,46 @@ $(document).ready(function () {
   }
 
   // MODAL
+  // MODAL
   function populateSelectedModal(selectedId) {
     const outputSlideModal = $("#selectedCardModal");
+
     let mealDescription = properties[0].mealOptions[0].description;
 
     const slideModalHtml = `
       <div class="selected-modal">
-          <button id="close-modal"><i class="fa-solid fa-xmark"></i></button>
-          <img src="${properties[selectedId - 1].image}">
+        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button> <!-- Close button added here -->
+        <img src="${properties[selectedId - 1].image}">
 
-          <div class="modal-contents">
-            <div class="content-container">
+        <div class="modal-contents">
+          <div class="content-container">
 
-              <div class="column1">
-                <h3>${properties[selectedId - 1].name}</h3>
-                <p>${properties[selectedId - 1].description}</p>
-                <h4>Meal Options</h4>
-                <p>${mealDescription}</p>
+            <div class="column1">
+              <h3>${properties[selectedId - 1].name}</h3>
+              <p>${properties[selectedId - 1].description}</p>
+              <h4>Meal Options</h4>
+              <p>${mealDescription}</p>
 
-                <div class="property-amenities">
-                  <p>${properties[selectedId - 1].bedrooms} <i class="fa-solid fa-bed"></i></p>
-                  <p>${properties[selectedId - 1].bathrooms} <i class="fa-solid fa-bath"></i></p>
-                </div>
+              <div class="property-amenities">
+                <p>${properties[selectedId - 1].bedrooms} <i class="fa-solid fa-bed"></i></p>
+                <p>${properties[selectedId - 1].bathrooms} <i class="fa-solid fa-bath"></i></p>
               </div>
-
-              <div class="column2">
-                <div class="map" id="map"></div>
-
-                <div class="price-and-button">
-                  <h3>${properties[selectedId - 1].pricePerNight}</h3>
-                  <button class="book-now" data-id="${selectedId}">Book Now</button> <!-- Add data-id attribute here -->
-                </div>
-              </div>
-
             </div>
+
+            <div class="column2">
+              <div class="map" id="map"></div>
+
+              <div class="price-and-button">
+                <h3>${properties[selectedId - 1].pricePerNight}</h3>
+                <button class="book-now" data-id="${selectedId}">Book Now</button>
+              </div>
+            </div>
+
           </div>
+        </div>
       </div>
     `;
+    
     const longitude = properties[selectedId - 1].longitude;
     const latitude = properties[selectedId - 1].latitude;
 
@@ -550,6 +553,11 @@ $(document).ready(function () {
     // Rebuild Fullpage to see the new slides
     fullpage_api.reBuild();
 
+    // Close modal event listener
+    $(".close-modal").click(function () {
+      fullpage_api.moveTo(1, 2); // Move to the accommodations slide
+    });
+
     $(".book-now").click(function () {
       const selectedTotal = $(this).data('id'); 
       populateTotal(properties[selectedTotal - 1]); 
@@ -559,57 +567,72 @@ $(document).ready(function () {
   }
 
   // Total
-  // Total
   function populateTotal(property) {
-
     const totalOutput = $("#total");
-
+  
     const propertyName = property.name;
     const propertyPricePerNight = parseInt(property.pricePerNight.replace('$', ''), 10);
     const diffDays = calculateDays();
-
-    let mealType = property.mealOptions.length > 0 ? property.mealOptions[0].type : "None";
-    let mealPrice = property.mealOptions.length > 0 ? property.mealOptions[0].price : 0;
-
+  
+    // Default meal price is the first option's price
+    const defaultMealPrice = property.mealOptions.length > 0 ? property.mealOptions[0].price : 0;
     const totalPropertyPrice = propertyPricePerNight * diffDays;
-    const totalMealPrice = mealPrice * diffDays;
+    const totalMealPrice = defaultMealPrice * diffDays;
     const totalPrice = totalPropertyPrice + totalMealPrice;
-
+  
     let mealButtonsHtml = '';
-    property.mealOptions.forEach(option => {
-      mealButtonsHtml += `<button class="meal-option" data-type="${option.type}" data-price="${option.price}">${option.type}</button>`;
+    property.mealOptions.forEach((option, index) => {
+      const isSelected = index === 0 ? 'selected-meal' : ''; // Set the first button as selected
+      mealButtonsHtml += `<button class="meal-option ${isSelected}" data-type="${option.type}" data-price="${option.price}">${option.type}</button>`;
     });
-
+  
     const slideTotalHtml = `
-    <div class="total-container">
-      <div class="name-and-price">
-        <h3>${propertyName}</h3>
-        <h3>${property.pricePerNight}</h3>
+      <div class="total-container">
+        <div class="name-and-price">
+          <h3>${propertyName}</h3>
+          <h3>${property.pricePerNight}</h3>
+        </div>
+        <ul>
+          <li>${$('#guests').val()} Guest</li>
+          <li>${diffDays} Nights stay + selected meal</li>
+        </ul>
+  
+        <div class="name-and-price">
+          <h3>Meal Options</h3>
+          <h3 id="mealPriceDisplay">$${defaultMealPrice}</h3>
+        </div>
+  
+        <div class="meal-options">
+          ${mealButtonsHtml}
+        </div>
+  
+        <h4>Total Price</h4>
+        <p id="importantMessage">*Note that the total price is multiplied by Accommodation + Meal x Nights staying</p>
+        <div class="total-price">
+          <h3>Total</h3>
+          <h3 id="totalPriceDisplay">$${totalPrice}</h3>
+        </div>
+        <button id="complete">Complete Booking</button>
       </div>
-      <ul>
-        <li>${$('#guests').val()}</li>
-        <li>${diffDays} Nights</li>
-      </ul>
-
-      <div class="name-and-price">
-        <h3>Meal Options</h3>
-        <h3>$${mealPrice}</h3>
-      </div>
-
-      <div class="meal-options">
-        ${mealButtonsHtml}
-      </div>
-
-      <h4>Total Price</h4>
-      <div class="total-price">
-        <h3>Total</h3>
-        <h3>$${totalPrice}</h3>
-      </div>
-      <button id="complete">Complete Booking</button>
-    </div>
-  `;
+    `;
+  
     totalOutput.empty();
     totalOutput.append(slideTotalHtml);
+  
+    // Event listeners to meal buttons
+    $(".meal-option").click(function() {
+      const selectedMealPrice = parseInt($(this).data('price'), 10);
+      const updatedTotalMealPrice = selectedMealPrice * diffDays;
+      const updatedTotalPrice = totalPropertyPrice + updatedTotalMealPrice;
+  
+      // Update meal price and total price
+      $("#mealPriceDisplay").text(`$${selectedMealPrice}`);
+      $("#totalPriceDisplay").text(`$${updatedTotalPrice}`);
+  
+      // Remove 'selected-meal' class from all buttons
+      $(".meal-option").removeClass("selected-meal");
+      // Add 'selected-meal' class to the clicked button
+      $(this).addClass("selected-meal");
+    });
   }
-
 });

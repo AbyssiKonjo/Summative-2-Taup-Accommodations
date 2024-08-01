@@ -266,13 +266,13 @@ nav {
     align-items: center;
     color: white;
 
-    #close-modal {
+    .close-modal {
+        position: absolute;
+        right: 15%;
         color: #F0AA52;
         background: none;
         border: none;
-        position: fixed;
         font-size: 100px;
-        right: 2.4%;
     }
 
     .selected-modal {
@@ -368,6 +368,14 @@ nav {
             padding: 0 20px 20px;
         }
 
+        h4 {
+            margin-bottom: 10px;
+        }
+
+        #importantMessage {
+            color: red;
+        }
+
         .meal-options {
             padding: 0 20px 20px 0;
             border-radius: 4px;
@@ -378,7 +386,15 @@ nav {
                 padding: 10px;
                 border: none;
                 border-radius: 4px;
+                &:hover {
+                    color: black;
+                    background-color: white;
+                }
             }
+        }
+
+        .selected-meal {
+            color: white;
         }
 
         .total-price {
