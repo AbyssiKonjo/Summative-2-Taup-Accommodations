@@ -4,8 +4,8 @@ const properties = [{
     id: 1,
     name: "Beach Hotel",
     location: "Taupō",
-    longitude: 178.0176,
-    latitude: -38.6623,
+    longitude: 176.0781,
+    latitude: -38.6869,
     accommodationType: 'Hotel',
     minPeople: 1,
     maxPeople: 2,
@@ -15,7 +15,7 @@ const properties = [{
     bedrooms: 1,
     bathrooms: 1,
     image: "images/beach-house.webp",
-    description: `Welcome to `,
+    description: `Welcome to Beach Hotel, your perfect getaway located in the beautiful town of Taupō, New Zealand. Enjoy stunning lake views and relax in our comfortable and well-appointed accommodations. Our hotel offers easy access to local attractions and outdoor activities, making it an ideal choice for couples seeking a serene and romantic escape.`,
     mealOptions: [{
         description: 'Meal option selections available upon booking.',
         type: 'None',
@@ -39,8 +39,8 @@ const properties = [{
     id: 2,
     name: "Mary's Hostel Owaisis",
     location: "Taupō",
-    longitude: 178.0176,
-    latitude: -38.6623,
+    longitude: 176.0752,
+    latitude: -38.6848,
     accommodationType: 'Hostel',
     minPeople: 1,
     maxPeople: 1,
@@ -50,31 +50,32 @@ const properties = [{
     bedrooms: 1,
     bathrooms: 1,
     image: "images/marys-hostel.webp",
-    description: `Welcome to `,
+    description: `Welcome to Mary's Hostel Oasis, your budget-friendly haven located near the stunning Lake Taupō, New Zealand. Our cozy hostel offers a comfortable and social environment for solo travelers. Enjoy easy access to local attractions, vibrant nightlife, and a variety of outdoor activities. Whether you're here for adventure or relaxation, Mary's Hostel Oasis is the perfect base for your stay in Taupō.`,
     mealOptions: [{
-        type: 'None',
-        price: 0
-      },
-      {
-        type: 'Breakfast',
-        price: 30
-      },
-      {
-        type: 'Lunch',
-        price: 50
-      },
-      {
-        type: 'Dinner',
-        price: 70
-      }
-    ]
+      description: 'Meal option selections available upon booking.',
+      type: 'None',
+      price: 0
+    },
+    {
+      type: 'Breakfast',
+      price: 30
+    },
+    {
+      type: 'Lunch',
+      price: 50
+    },
+    {
+      type: 'Dinner',
+      price: 70
+    }
+  ],
   },
   {
     id: 3,
     name: "Zangers Loft",
     location: "Taupō",
-    longitude: 178.0176,
-    latitude: -38.6623,
+    longitude: 176.0800,
+    latitude: -38.6875,
     accommodationType: 'Motel',
     minPeople: 2,
     maxPeople: 4,
@@ -84,31 +85,32 @@ const properties = [{
     bedrooms: 3,
     bathrooms: 2,
     image: "images/zangers-loft.webp",
-    description: `Welcome to `,
+    description: `Welcome to Zangers Loft, a charming and spacious motel located near the picturesque Lake Taupō, New Zealand. Our motel is perfect for families or small groups seeking a comfortable and affordable stay. With three bedrooms and two bathrooms, Zangers Loft offers ample space and modern amenities. Enjoy easy access to local attractions, water activities, and the natural beauty of Taupō during your stay.`,
     mealOptions: [{
-        type: 'None',
-        price: 0
-      },
-      {
-        type: 'Breakfast',
-        price: 30
-      },
-      {
-        type: 'Lunch',
-        price: 50
-      },
-      {
-        type: 'Dinner',
-        price: 70
-      }
-    ]
+      description: 'Meal option selections available upon booking.',
+      type: 'None',
+      price: 0
+    },
+    {
+      type: 'Breakfast',
+      price: 30
+    },
+    {
+      type: 'Lunch',
+      price: 50
+    },
+    {
+      type: 'Dinner',
+      price: 70
+    }
+  ],
   },
   {
     id: 4,
     name: "Ambers Retreat",
     location: "Taupō",
-    longitude: 178.0176,
-    latitude: -38.6623,
+    longitude: 176.0835,
+    latitude: -38.6882,
     accommodationType: 'House',
     minPeople: 1,
     maxPeople: 4,
@@ -118,18 +120,146 @@ const properties = [{
     bedrooms: 4,
     bathrooms: 3,
     image: "images/ambers-retreat.webp",
-    description: `Welcome to `,
+    description: `Welcome to Ambers Retreat, a luxurious house situated near the beautiful Lake Taupō, New Zealand. This spacious and elegant retreat is perfect for families or small groups seeking a premium getaway. With four bedrooms and three bathrooms, Ambers Retreat offers plenty of space and top-notch amenities. Enjoy breathtaking lake views, easy access to local attractions, and a serene environment during your stay at Ambers Retreat.`,
     mealOptions: [{
       type: 'None',
+      price: 0,
       description: 'Kitchen available for use'
     }]
   },
   {
     id: 5,
+    name: "Mountain Lodge",
+    location: "Taupō",
+    longitude: 176.1234,
+    latitude: -38.6900,
+    accommodationType: "Hotel",
+    minPeople: 1,
+    maxPeople: 2,
+    minStay: 1,
+    maxStay: 5,
+    pricePerNight: "$157",
+    bedrooms: 1,
+    bathrooms: 1,
+    image: "images/beach-house.webp",
+    description: "Experience the cozy charm of Mountain Lodge, nestled in the picturesque town of Taupō, New Zealand. Our hotel provides a warm and inviting atmosphere with breathtaking views of the surrounding mountains. Perfect for a relaxing retreat or a romantic getaway, with easy access to outdoor adventures.",
+    mealOptions: [{
+      description: 'Meal option selections available upon booking.',
+      type: 'None',
+      price: 0
+    },
+    {
+      type: 'Breakfast',
+      price: 30
+    },
+    {
+      type: 'Lunch',
+      price: 50
+    },
+    {
+      type: 'Dinner',
+      price: 70
+    }
+  ],
+  },
+  {
+    id: 6,
+    name: "Mary's Hostel Owaisis",
+    location: "Taupō",
+    longitude: 176.0752,
+    latitude: -38.6848,
+    accommodationType: 'Hostel',
+    minPeople: 1,
+    maxPeople: 1,
+    minStay: 1,
+    maxStay: 10,
+    pricePerNight: "$30",
+    bedrooms: 1,
+    bathrooms: 1,
+    image: "images/marys-hostel.webp",
+    description: `Welcome to Mary's Hostel Oasis, your budget-friendly haven located near the stunning Lake Taupō, New Zealand. Our cozy hostel offers a comfortable and social environment for solo travelers. Enjoy easy access to local attractions, vibrant nightlife, and a variety of outdoor activities. Whether you're here for adventure or relaxation, Mary's Hostel Oasis is the perfect base for your stay in Taupō.`,
+    mealOptions: [{
+      description: 'Meal option selections available upon booking.',
+      type: 'None',
+      price: 0
+    },
+    {
+      type: 'Breakfast',
+      price: 30
+    },
+    {
+      type: 'Lunch',
+      price: 50
+    },
+    {
+      type: 'Dinner',
+      price: 70
+    }
+  ],
+  },
+  {
+    id: 7,
+    name: "Zangers Loft",
+    location: "Taupō",
+    longitude: 176.0800,
+    latitude: -38.6875,
+    accommodationType: 'Motel',
+    minPeople: 2,
+    maxPeople: 4,
+    minStay: 3,
+    maxStay: 10,
+    pricePerNight: "$90",
+    bedrooms: 3,
+    bathrooms: 2,
+    image: "images/zangers-loft.webp",
+    description: `Welcome to Zangers Loft, a charming and spacious motel located near the picturesque Lake Taupō, New Zealand. Our motel is perfect for families or small groups seeking a comfortable and affordable stay. With three bedrooms and two bathrooms, Zangers Loft offers ample space and modern amenities. Enjoy easy access to local attractions, water activities, and the natural beauty of Taupō during your stay.`,
+    mealOptions: [{
+      description: 'Meal option selections available upon booking.',
+      type: 'None',
+      price: 0
+    },
+    {
+      type: 'Breakfast',
+      price: 30
+    },
+    {
+      type: 'Lunch',
+      price: 50
+    },
+    {
+      type: 'Dinner',
+      price: 70
+    }
+  ],
+  },
+  {
+    id: 8,
+    name: "Ambers Retreat",
+    location: "Taupō",
+    longitude: 176.0835,
+    latitude: -38.6882,
+    accommodationType: 'House',
+    minPeople: 1,
+    maxPeople: 4,
+    minStay: 2,
+    maxStay: 15,
+    pricePerNight: "$240",
+    bedrooms: 4,
+    bathrooms: 3,
+    image: "images/ambers-retreat.webp",
+    description: `Welcome to Ambers Retreat, a luxurious house situated near the beautiful Lake Taupō, New Zealand. This spacious and elegant retreat is perfect for families or small groups seeking a premium getaway. With four bedrooms and three bathrooms, Ambers Retreat offers plenty of space and top-notch amenities. Enjoy breathtaking lake views, easy access to local attractions, and a serene environment during your stay at Ambers Retreat.`,
+    mealOptions: [{
+      type: 'None',
+      price: 0,
+      description: 'Kitchen available for use'
+    }]
+  },
+  {
+    id: 9,
     name: "Beach Hotel",
     location: "Taupō",
-    longitude: 178.0176,
-    latitude: -38.6623,
+    longitude: 176.0781,
+    latitude: -38.6869,
     accommodationType: 'Hotel',
     minPeople: 1,
     maxPeople: 2,
@@ -139,8 +269,9 @@ const properties = [{
     bedrooms: 1,
     bathrooms: 1,
     image: "images/beach-house.webp",
-    description: `Welcome to `,
+    description: `Welcome to Beach Hotel, your perfect getaway located in the beautiful town of Taupō, New Zealand. Enjoy stunning lake views and relax in our comfortable and well-appointed accommodations. Our hotel offers easy access to local attractions and outdoor activities, making it an ideal choice for couples seeking a serene and romantic escape.`,
     mealOptions: [{
+        description: 'Meal option selections available upon booking.',
         type: 'None',
         price: 0
       },
@@ -156,14 +287,14 @@ const properties = [{
         type: 'Dinner',
         price: 70
       }
-    ]
+    ],
   },
   {
-    id: 6,
+    id: 10,
     name: "Mary's Hostel Owaisis",
     location: "Taupō",
-    longitude: 178.0176,
-    latitude: -38.6623,
+    longitude: 176.0752,
+    latitude: -38.6848,
     accommodationType: 'Hostel',
     minPeople: 1,
     maxPeople: 1,
@@ -173,31 +304,32 @@ const properties = [{
     bedrooms: 1,
     bathrooms: 1,
     image: "images/marys-hostel.webp",
-    description: `Welcome to `,
+    description: `Welcome to Mary's Hostel Oasis, your budget-friendly haven located near the stunning Lake Taupō, New Zealand. Our cozy hostel offers a comfortable and social environment for solo travelers. Enjoy easy access to local attractions, vibrant nightlife, and a variety of outdoor activities. Whether you're here for adventure or relaxation, Mary's Hostel Oasis is the perfect base for your stay in Taupō.`,
     mealOptions: [{
-        type: 'None',
-        price: 0
-      },
-      {
-        type: 'Breakfast',
-        price: 30
-      },
-      {
-        type: 'Lunch',
-        price: 50
-      },
-      {
-        type: 'Dinner',
-        price: 70
-      }
-    ]
+      description: 'Meal option selections available upon booking.',
+      type: 'None',
+      price: 0
+    },
+    {
+      type: 'Breakfast',
+      price: 30
+    },
+    {
+      type: 'Lunch',
+      price: 50
+    },
+    {
+      type: 'Dinner',
+      price: 70
+    }
+  ],
   },
   {
-    id: 7,
+    id: 11,
     name: "Zangers Loft",
     location: "Taupō",
-    longitude: 178.0176,
-    latitude: -38.6623,
+    longitude: 176.0800,
+    latitude: -38.6875,
     accommodationType: 'Motel',
     minPeople: 2,
     maxPeople: 4,
@@ -207,8 +339,66 @@ const properties = [{
     bedrooms: 3,
     bathrooms: 2,
     image: "images/zangers-loft.webp",
-    description: `Welcome to `,
+    description: `Welcome to Zangers Loft, a charming and spacious motel located near the picturesque Lake Taupō, New Zealand. Our motel is perfect for families or small groups seeking a comfortable and affordable stay. With three bedrooms and two bathrooms, Zangers Loft offers ample space and modern amenities. Enjoy easy access to local attractions, water activities, and the natural beauty of Taupō during your stay.`,
     mealOptions: [{
+      description: 'Meal option selections available upon booking.',
+      type: 'None',
+      price: 0
+    },
+    {
+      type: 'Breakfast',
+      price: 30
+    },
+    {
+      type: 'Lunch',
+      price: 50
+    },
+    {
+      type: 'Dinner',
+      price: 70
+    }
+  ],
+  },
+  {
+    id: 12,
+    name: "Ambers Retreat",
+    location: "Taupō",
+    longitude: 176.0835,
+    latitude: -38.6882,
+    accommodationType: 'House',
+    minPeople: 1,
+    maxPeople: 4,
+    minStay: 2,
+    maxStay: 15,
+    pricePerNight: "$240",
+    bedrooms: 4,
+    bathrooms: 3,
+    image: "images/ambers-retreat.webp",
+    description: `Welcome to Ambers Retreat, a luxurious house situated near the beautiful Lake Taupō, New Zealand. This spacious and elegant retreat is perfect for families or small groups seeking a premium getaway. With four bedrooms and three bathrooms, Ambers Retreat offers plenty of space and top-notch amenities. Enjoy breathtaking lake views, easy access to local attractions, and a serene environment during your stay at Ambers Retreat.`,
+    mealOptions: [{
+      type: 'None',
+      price: 0,
+      description: 'Kitchen available for use'
+    }]
+  },
+  {
+    id: 13,
+    name: "Beach Hotel",
+    location: "Taupō",
+    longitude: 176.0781,
+    latitude: -38.6869,
+    accommodationType: 'Hotel',
+    minPeople: 1,
+    maxPeople: 2,
+    minStay: 1,
+    maxStay: 5,
+    pricePerNight: "$157",
+    bedrooms: 1,
+    bathrooms: 1,
+    image: "images/beach-house.webp",
+    description: `Welcome to Beach Hotel, your perfect getaway located in the beautiful town of Taupō, New Zealand. Enjoy stunning lake views and relax in our comfortable and well-appointed accommodations. Our hotel offers easy access to local attractions and outdoor activities, making it an ideal choice for couples seeking a serene and romantic escape.`,
+    mealOptions: [{
+        description: 'Meal option selections available upon booking.',
         type: 'None',
         price: 0
       },
@@ -224,14 +414,84 @@ const properties = [{
         type: 'Dinner',
         price: 70
       }
-    ]
+    ],
   },
   {
-    id: 8,
+    id: 14,
+    name: "Mary's Hostel Owaisis",
+    location: "Taupō",
+    longitude: 176.0752,
+    latitude: -38.6848,
+    accommodationType: 'Hostel',
+    minPeople: 1,
+    maxPeople: 1,
+    minStay: 1,
+    maxStay: 10,
+    pricePerNight: "$30",
+    bedrooms: 1,
+    bathrooms: 1,
+    image: "images/marys-hostel.webp",
+    description: `Welcome to Mary's Hostel Oasis, your budget-friendly haven located near the stunning Lake Taupō, New Zealand. Our cozy hostel offers a comfortable and social environment for solo travelers. Enjoy easy access to local attractions, vibrant nightlife, and a variety of outdoor activities. Whether you're here for adventure or relaxation, Mary's Hostel Oasis is the perfect base for your stay in Taupō.`,
+    mealOptions: [{
+      description: 'Meal option selections available upon booking.',
+      type: 'None',
+      price: 0
+    },
+    {
+      type: 'Breakfast',
+      price: 30
+    },
+    {
+      type: 'Lunch',
+      price: 50
+    },
+    {
+      type: 'Dinner',
+      price: 70
+    }
+  ],
+  },
+  {
+    id: 15,
+    name: "Zangers Loft",
+    location: "Taupō",
+    longitude: 176.0800,
+    latitude: -38.6875,
+    accommodationType: 'Motel',
+    minPeople: 2,
+    maxPeople: 4,
+    minStay: 3,
+    maxStay: 10,
+    pricePerNight: "$90",
+    bedrooms: 3,
+    bathrooms: 2,
+    image: "images/zangers-loft.webp",
+    description: `Welcome to Zangers Loft, a charming and spacious motel located near the picturesque Lake Taupō, New Zealand. Our motel is perfect for families or small groups seeking a comfortable and affordable stay. With three bedrooms and two bathrooms, Zangers Loft offers ample space and modern amenities. Enjoy easy access to local attractions, water activities, and the natural beauty of Taupō during your stay.`,
+    mealOptions: [{
+      description: 'Meal option selections available upon booking.',
+      type: 'None',
+      price: 0
+    },
+    {
+      type: 'Breakfast',
+      price: 30
+    },
+    {
+      type: 'Lunch',
+      price: 50
+    },
+    {
+      type: 'Dinner',
+      price: 70
+    }
+  ],
+  },
+  {
+    id: 16,
     name: "Ambers Retreat",
     location: "Taupō",
-    longitude: 178.0176,
-    latitude: -38.6623,
+    longitude: 176.0835,
+    latitude: -38.6882,
     accommodationType: 'House',
     minPeople: 1,
     maxPeople: 4,
@@ -241,13 +501,13 @@ const properties = [{
     bedrooms: 4,
     bathrooms: 3,
     image: "images/ambers-retreat.webp",
-    description: `Welcome to `,
+    description: `Welcome to Ambers Retreat, a luxurious house situated near the beautiful Lake Taupō, New Zealand. This spacious and elegant retreat is perfect for families or small groups seeking a premium getaway. With four bedrooms and three bathrooms, Ambers Retreat offers plenty of space and top-notch amenities. Enjoy breathtaking lake views, easy access to local attractions, and a serene environment during your stay at Ambers Retreat.`,
     mealOptions: [{
       type: 'None',
+      price: 0,
       description: 'Kitchen available for use'
     }]
   },
-
 ];
 
 $(document).ready(function () {
@@ -409,6 +669,7 @@ $(document).ready(function () {
     }
   }
 
+  // PROPERTIES
   displayProperties(properties);
 
   function displayProperties(properties) {
@@ -473,6 +734,7 @@ $(document).ready(function () {
     // Rebuild Fullpage to see the new slides
     fullpage_api.reBuild();
 
+    // READ MORE BUTTON
     $(".read-more").click(function () {
       const propertyId = $(this).data('id');
       populateSelectedModal(propertyId);
@@ -493,7 +755,6 @@ $(document).ready(function () {
   }
 
   // MODAL
-  // MODAL
   function populateSelectedModal(selectedId) {
     const outputSlideModal = $("#selectedCardModal");
 
@@ -501,8 +762,8 @@ $(document).ready(function () {
 
     const slideModalHtml = `
       <div class="selected-modal">
-        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button> <!-- Close button added here -->
-        <img src="${properties[selectedId - 1].image}">
+        <button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
+        <img src="${properties[selectedId - 1].image}" alt="${properties[selectedId - 1].name}>
 
         <div class="modal-contents">
           <div class="content-container">
@@ -530,7 +791,6 @@ $(document).ready(function () {
 
           </div>
         </div>
-      </div>
     `;
     
     const longitude = properties[selectedId - 1].longitude;
@@ -574,7 +834,6 @@ $(document).ready(function () {
     const propertyPricePerNight = parseInt(property.pricePerNight.replace('$', ''), 10);
     const diffDays = calculateDays();
   
-    // Default meal price is the first option's price
     const defaultMealPrice = property.mealOptions.length > 0 ? property.mealOptions[0].price : 0;
     const totalPropertyPrice = propertyPricePerNight * diffDays;
     const totalMealPrice = defaultMealPrice * diffDays;

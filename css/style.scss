@@ -211,8 +211,6 @@ nav {
                 color: white;
                 border: 1px solid rgba(255, 255, 255, 0.18);
                 box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.25);
-                -webkit-box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.25);
-                -moz-box-shadow: 2px 3px 5px 2px rgba(0, 0, 0, 0.25);
 
                 img {
                     width: 100%;
@@ -355,6 +353,7 @@ nav {
         color: white;
         width: 80vw;
         padding: 20px;
+        border-radius: 10px;
 
         .name-and-price {
             display: flex;
